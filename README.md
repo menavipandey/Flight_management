@@ -6,11 +6,11 @@ Flight Management System is a console-based application that provides various fu
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Algorithms Used](#algorithms-used)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -19,9 +19,15 @@ This project implements various algorithms and data structures to manage flight-
 ## Features
 
 - **Shortest Path Calculation**: Uses Dijkstra's algorithm to find the shortest path (in terms of distance) between two airports.
-- **Minimum Cost Calculation**: Computes the minimum cost of flying between two airports based on flight prices.
-- **Flight Availability**: Determines the number of flights available between two airports using network flow (Edmond Karp algorithm).
+- **Minimum Cost Calculation**: Computes the minimum cost of flying between two airports based on flight prices using Dijkstra's algorithm with a priority queue.
+- **Flight Availability**: Determines the number of flights available between two airports using the Edmonds-Karp algorithm for maximum flow in a network.
 - **Budget-based Travel Planning**: Helps users plan travel routes based on a specified budget, maximizing the distance traveled.
+
+## Algorithms Used
+
+- **Dijkstra's Algorithm**: Used for finding the shortest path between airports based on distance. It employs a priority queue to efficiently retrieve the shortest path.
+  
+- **Edmonds-Karp Algorithm**: Used to determine the maximum flow (number of flights) between airports, essential for determining flight availability between airports.
 
 ## Requirements
 
@@ -61,7 +67,3 @@ This project implements various algorithms and data structures to manage flight-
 ## Contributing
 
 Contributions are welcome! If you find any issues or want to enhance the functionality, feel free to create a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
